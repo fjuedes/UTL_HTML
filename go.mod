@@ -1,5 +1,5 @@
 //$Id: go.mod 77 2025-04-21 03:12:08Z fjuedes $
-module UTL_HTML
+module github.com/fjuedes/UTL_HTML
 
 go 1.23.0
 
