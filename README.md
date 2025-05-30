@@ -1,6 +1,6 @@
 # UTL_HTML - Programmatically generate HTML documents
 
-This go package defines a type T_HTML, with functions/methods to build an HTML document from the ground up. For the most used HTML-tags there is a corresponding function/method with the same name, just with the first letter capitalized. The Div() function/method for example generates complete <div> tags with opening and closing tags, content and attributes. Simple HTML-documents can be constructed by calling the tag-methods in the order the tags should appear in the document and using method-chaining the go code will represent the structure of the HTML document rather well.
+This go package defines a type T_HTML, with functions/methods to build an HTML document from the ground up. For the most used HTML-tags there is a corresponding function/method with the same name, just with the first letter capitalized. The Div() function/method for example generates complete \<div\> tags with opening and closing tags, content and attributes. Simple HTML-documents can be constructed by calling the tag-methods in the order the tags should appear in the document and using method-chaining the go code will represent the structure of the HTML document rather well.
 
 # Version
 ```$Id: UTL_HTML.go 79 2025-04-29 20:33:24Z fjuedes $```
@@ -28,7 +28,7 @@ This go package defines a type T_HTML, with functions/methods to build an HTML d
 ```
 
 # Overview
-Please find a thematically ordered list of the exported functions and methods of the T_HTML object below. Usually the name of the function/method is the name of the HTML-element, just with the first letter capitalized, for example the <title> tag is created through the method Title(). Some tags will never be generated with their complete content, for example the <body> tag. So there is no Body() method defined, but a BodyOpen() method which generates the opening tag only. These tags are tracked in an internal tag-stack and will be closed semi-automagically when one of the TagClose...() methods is called. 
+Please find a thematically ordered list of the exported functions and methods of the T_HTML object below. Usually the name of the function/method is the name of the HTML-element, just with the first letter capitalized, for example the \<title\> tag is created through the method Title(). Some tags will never be generated with their complete content, for example the \<body\> tag. So there is no Body() method defined, but a BodyOpen() method which generates the opening tag only. These tags are tracked in an internal tag-stack and will be closed semi-automagically when one of the TagClose...() methods is called. 
 
 Funtions whose name end with the letter "f" work similar to fmt.Printf, accepting a string as a format-mask and a variable number of data-items of any type. For example the B(string) method encapsulates content in \<b\> tags: \<b\>bold text\</b\>. The simliar named method Bf(string, any...) method formats data-items according to the format-mask and encapsulates the resulting string into the \<b\> tag. Example: Bf("Parametervalue is '%d'.",p_Value) will append \<b\>Parametervalue is '4711'.\</b\> to the HTML document if the value of p_Value is the number 4711.
 
